@@ -355,3 +355,4 @@ dmypy.json
 cython_debug/
 
 !/mystie/mystie/
+!/mystie/secrets.json
