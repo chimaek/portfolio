@@ -85,17 +85,6 @@ pyvenv.cfg
 .venv
 pip-selfcheck.json
 
-### Vue template
-# gitignore template for Vue.js projects
-#
-# Recommended template: Node.gitignore
-
-# TODO: where does this rule come from?
-docs/_book
-
-# TODO: where does this rule come from?
-test/
-
 ### Node template
 # Logs
 logs
@@ -213,6 +202,17 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+### Vue template
+# gitignore template for Vue.js projects
+#
+# Recommended template: Node.gitignore
+
+# TODO: where does this rule come from?
+docs/_book
+
+# TODO: where does this rule come from?
+test/
 
 ### Python template
 # Byte-compiled / optimized / DLL files
@@ -354,4 +354,3 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-!/mystie/mystie/
