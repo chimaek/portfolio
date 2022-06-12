@@ -13,6 +13,7 @@ pyvenv.cfg
 pip-selfcheck.json
 /secrets.json
 ### Node template
+*.json
 # Logs
 logs
 *.log
@@ -282,3 +283,8 @@ dmypy.json
 cython_debug/
 
 !/secrets.json
+
+!/mystie/mystie/
+!/mystie/secrets.json
+/mystie/secrets.json
+mystie/secrets.json

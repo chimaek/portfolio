@@ -356,3 +356,5 @@ cython_debug/
 
 !/mystie/mystie/
 !/mystie/secrets.json
+/mystie/secrets.json
+mystie/secrets.json
