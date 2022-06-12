@@ -85,6 +85,14 @@ pyvenv.cfg
 .venv
 pip-selfcheck.json
 
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
 ### Vue template
 # gitignore template for Vue.js projects
 #
@@ -339,7 +347,7 @@ venv.bak/
 
 # mkdocs documentation
 /site
-./*.json
+
 # mypy
 .mypy_cache/
 .dmypy.json
@@ -354,7 +362,5 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-!/mystie/mystie/
-!/mystie/secrets.json
-/mystie/secrets.json
-mystie/secrets.json
+!/secrets.json
+/secrets.json
