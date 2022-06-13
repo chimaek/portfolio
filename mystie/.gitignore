@@ -364,3 +364,4 @@ cython_debug/
 
 !/secrets.json
 /secrets.json
+!/secrets.json
