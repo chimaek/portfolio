@@ -71,7 +71,7 @@ ROOT_URLCONF = 'mystie.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['mystie/polls/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

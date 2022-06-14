@@ -5,6 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-{{ que }}
+    <h1>{{ que.question_text }}</h1>
+    {% with value = '2323' %}
+    <h1>{{value}}</h1>
+    {% endwith %}
+    <ul>
+        {% for choice in que.choice_set.all %}
+            <li>{{ choice.choice_text }}</li>
+        {% endfor %}
+    </ul>
+
 </body>
+
 </html>

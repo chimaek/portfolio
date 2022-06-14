@@ -4,7 +4,6 @@ from django.template import loader
 
 from .models import Question
 
-
 def index(req):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
     # output = ", ".join([q.question_text for q in latest_question_list])
@@ -13,7 +12,6 @@ def index(req):
         "latest_question_list": latest_question_list,
     }
     return render(req, 'index.html', context)
-
 
 def detail(request, question_id):
     try:
@@ -30,7 +28,3 @@ def results(request, question_id):
 
 def vote(request, question_id):
     return HttpResponse("You're voting on question %s." % question_id)
-
-
-def temp(self, maximus):
-    return HttpResponse(f"kim{maximus}")
