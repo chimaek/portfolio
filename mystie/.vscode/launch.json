@@ -5,16 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: 현재 파일",
+            "name": "Python: Django",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/manage.py",
-            "console": "integratedTerminal",
-            "justMyCode": true,
+            "program": "${workspaceFolder}\\manage.py",
             "args": [
                 "runserver"
             ],
-            "django": true
+            "django": true,
+            "justMyCode": true
         }
     ]
- 
+}
