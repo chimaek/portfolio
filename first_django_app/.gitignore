@@ -251,3 +251,4 @@ dmypy.json
 cython_debug/
 
 .secrets.json
+settings
