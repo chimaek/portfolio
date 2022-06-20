@@ -2,11 +2,12 @@ from django.db.models import *
 
 from datetime import datetime
 
-#모델 추가시  py manage.py migrations <app name >
+
+# 모델 추가시  py manage.py migrations <app name >
 
 class Question(Model):
     question = CharField(max_length=200)
-    pub_date = DateTimeField(auto_now=True, name="Date Published")
+    pub_date = DateTimeField(name="Date_published")
 
 
 class Choice(Model):
