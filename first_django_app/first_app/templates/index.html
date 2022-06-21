@@ -6,13 +6,17 @@
 </head>
 <body>
 <div>
-    <ul>
-        {% for i in date %}
-        <li>
-            {{ i }}
-        </li>
-        {% endfor %}
-    </ul>
+    {% if lust %}
+        <ul>
+            {% for question in lust %}
+                <li>
+                    <a href="/first_app/{{ question.id }}/">{{ question.question }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p> No polls are available.</p>
+    {% endif %}
 </div>
 </body>
 </html>
