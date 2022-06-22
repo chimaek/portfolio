@@ -1,10 +1,13 @@
 {% extends "base.html" %}
 
-{% block content %} 
+{% block content %}
     <div class="container">
         <div class="row">
             ... add your HTML code here
-            <button class="btn-danger">이것은 버튼입니다.</button>
+        </div>
+        <div class="row">
+            {{ question }}
+            <button class="button is-primary" type="submit">실행</button>
         </div>
     </div>
 
