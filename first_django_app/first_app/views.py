@@ -1,5 +1,5 @@
 from django.http import Http404
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, get_object_or_404
 
 # Create your views here.
 from first_app.models import Question
@@ -11,11 +11,11 @@ def index(req):
 
 
 def detail(req, question_id):
-    try:
-        question = Question.objects.get(pk=question_id)
-    except Question.DoesNotExist:
-        raise Http404(f"{question_id} does not exist")
-
+    # try:
+    #     question = Question.objects.get(pk=question_id)
+    # except Question.DoesNotExist:
+    #     raise Http404(f"{question_id} does not exist")
+    question = get_object_or_404(Question, pk=question_id)
     return render(req, "detail.html", {'question': question})
 
 
