@@ -9,7 +9,7 @@ def index(req):
     # output = ','.join([q.question for q in lust])
     # return render(req, 'index.html', {'date': lust})
     con = {'lust', lust}
-    return render(req, "index.html", context=con)
+    return render(req, "index.html", {'lust': lust})
 
 
 def detail(req, question_id):

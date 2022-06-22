@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<div>
-    {% if lust %}
-        <ul>
-            {% for question in lust %}
-                <li>
-                    <a href="/first_app/{{ question.id }}/">{{ question.question }}</a>
-                </li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p> No polls are available.</p>
-    {% endif %}
-</div>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %} 
+    <div class="container">
+        <div class="row">
+            ... add your HTML code here
+        </div>
+    </div>
+
+{% endblock content %}
