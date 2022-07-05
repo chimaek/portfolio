@@ -24,3 +24,20 @@ class Choice(Model):
 
     def __str__(self):
         return self.choice_text
+
+
+class temp(Model):
+    choice = ForeignKey(Choice, on_delete=CASCADE)
+    temp_text = CharField(max_length=100)
+
+    def __str__(self):
+        return self.temp_text
+
+
+class me(object):
+
+    def __new__(cls, *args, **kwargs):
+        if not hasattr(cls, "_instance"):
+            cls._instance = super().__new__(cls)
+        return cls._instance
+

@@ -7,7 +7,8 @@ from first_app.models import Question
 
 def index(req):
     lust = Question.objects.order_by('pub_date')[:5]
-    return render(req, "index.html", {'lust': lust})
+    metadata = {'title': "welcome home"}
+    return render(req, "index.html", {'lust': lust, 'metadata': metadata})
 
 
 def detail(req, question_id):
@@ -16,6 +17,7 @@ def detail(req, question_id):
     # except Question.DoesNotExist:
     #     raise Http404(f"{question_id} does not exist")
     question = get_object_or_404(Question, pk=question_id)
+
     return render(req, "detail.html", {'question': question})
 
 
@@ -30,14 +32,7 @@ def vote(req, question_id) -> HttpResponse:
 class me(object):
 
     def __new__(cls, *args, **kwargs):
-        if not hasattr(cls, "_instance"):
-            cls._instance = super().__new__(cls)
-        return cls._instance
+        if not hasattr(cls, '_instance'):
+            _instance = super().__new__(cls)
+        return _instance
 
-    def __init__(self):
-        self.database = 2123
-
-    def generate(self):
-        for i in range(1, self.database):
-            print(i)
-            yield i
