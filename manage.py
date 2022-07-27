@@ -8,7 +8,7 @@ def main():
     """Run administrative tasks."""
     dev = "django_portfolio.config.settings.debug"
     deployee = "django_portfolio.config.settings.oci"
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", dev)
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", deployee)
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
