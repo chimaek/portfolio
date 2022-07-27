@@ -1688,3 +1688,8 @@ tags
 !/requirements.txt
 !/manage.py
 !/django_portfolio/static/**/*.*
+!/django_portfolio/static/*
+!/django_portfolio/urls.py
+!/django_portfolio/__init__.py
+!/django_portfolio/asgi.py
+!/django_portfolio/wsgi.py
