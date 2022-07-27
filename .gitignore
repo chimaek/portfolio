@@ -1687,5 +1687,6 @@ tags
 # Persistent undo
 [._]*.un~
 
-!/static/
 
+/static/
+!/django_portfolio/static/
