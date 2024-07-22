@@ -1,5 +1,6 @@
 package net.chimaek.spring_homepage.service;
 
+import java.io.IOException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +17,7 @@ public class AppService {
         return "Hello World!";
     }
 
-    public String incrementVisitCount() {
+    public String incrementVisitCount() throws IOException {
         return fileService.incrementVisitCount();
     }
 }

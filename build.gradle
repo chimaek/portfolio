@@ -35,6 +35,9 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	implementation 'com.github.vladimir-bukhtoyarov:bucket4j-core:8.0.1'
+	implementation 'com.github.vladimir-bukhtoyarov:bucket4j-jcache:7.6.0'
+	implementation 'org.ehcache:ehcache:3.10.8'
 }
 
 tasks.named('test') {

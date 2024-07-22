@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>제주에서 온 개발자 :)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta name="description" content="Seung ju Kim homepage"/>
+  <meta name="keywords"
+        content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, Material CV, portfolio"/>
+  <meta name="author" content="lmpixels"/>
+  <link rel="shortcut icon" th:href="@{/img/favicon.ico}">
+
+  <link rel="stylesheet" th:href="@{/css/reset.css}" type="text/css">
+  <link rel="stylesheet" th:href="@{/css/bootstrap-grid.min.css}" type="text/css">
+  <link rel="stylesheet" th:href="@{/css/animations.css}" type="text/css">
+  <link rel="stylesheet" th:href="@{/css/perfect-scrollbar.css}" type="text/css">
+  <link rel="stylesheet" th:href="@{/css/owl.carousel.css}" type="text/css">
+  <link rel="stylesheet" th:href="@{/css/magnific-popup.css}" type="text/css">
+  <link rel="stylesheet" th:href="@{/css/main.css}" type="text/css">
+</head>
+
+<body>
+<!-- Animated Background -->
+<div class="lm-animated-bg" th:style="'background-image: url(' + @{/img/main_bg.png} + ');'"></div>
+<!-- /Animated Background -->
+
+<!-- Loading animation -->
+<div class="preloader">
+  <div class="preloader-animation">
+    <div class="preloader-spinner">
+    </div>
+  </div>
+</div>
+<!-- /Loading animation -->
+
+<div class="page">
+  <div class="page-content">
+
+    <header id="site_header" class="header mobile-menu-hide">
+      <div class="header-content">
+        <div class="header-photo">
+          <img th:src="@{/img/me.jpg}" alt="Seung ju Kim">
+        </div>
+        <div class="header-titles">
+          <h2>Seung ju Kim</h2>
+          <h4>Backend Developer</h4>
+        </div>
+      </div>
+
+      <ul class="main-menu">
+        <li class="active">
+          <section id="home" class="animated-section start-page">
+          <a href="#home" class="nav-anim">
+            <span class="menu-icon lnr lnr-home"></span>
+            <span class="link-text">Home</span>
+          </a>
+          </section>
+        </li>
+        <li>
+          <a href="#about-me" class="nav-anim">
+            <span class="menu-icon lnr lnr-user"></span>
+            <span class="link-text">About Me</span>
+          </a>
+        </li>
+        <li>
+          <a href="#resume" class="nav-anim">
+            <span class="menu-icon lnr lnr-graduation-hat"></span>
+            <span class="link-text">Resume</span>
+          </a>
+        </li>
+        <li>
+          <a onclick="window.location.replace('https://seungjukim.notion.site/Seung-ju-Kim-Portfolio-8dffe620d6d64f62a03e51b1a9e8ba42')">
+            <span class="menu-icon lnr lnr-briefcase"></span>
+            <span class="link-text">Portfolio</span>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="nav-anim">
+            <span class="menu-icon lnr lnr-envelope"></span>
+            <span class="link-text">Contact</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="social-links">
+        <ul>
+          <li><a href="https://github.com/chimaek" target="_blank"><i class="fab fa-github"></i></a>
+          </li>
+          <li><a href="https://www.linkedin.com/in/seungjukim" target="_blank"><i
+              class="fab fa-linkedin"></i></a></li>
+          <li><a
+              href="https://www.notion.so/seungjukim/Seung-ju-Kim-Portfolio-8dffe620d6d64f62a03e51b1a9e8ba42"
+              target="_blank"><i class="fab fa-blogger"></i></a></li>
+        </ul>
+      </div>
+      <div class="header-buttons">
+        <a th:href="@{/document/resume.pdf}" target="_blank" class="btn btn-primary"
+           download="김승주_이력서">이력서 다운로드(PDF)</a>
+        <a th:href="@{/document/cv.pdf}" target="_blank" class="btn btn-primary"
+           download="김승주_경력기술서">경력기술서 다운로드(PDF)</a>
+      </div>
+      <div>
+        <p th:text="'방문 횟수: ' + ${visitorCount}"></p>
+      </div>
+      <div class="copyrights">© 2023 All rights reserved.</div>
+    </header>
+
+    <!-- 나머지 섹션들 (Home, About Me, Resume, Portfolio, Contact) -->
+    <!-- 각 섹션의 내용을 Thymeleaf 문법에 맞게 변환 -->
+
+  </div>
+</div>
+
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/modernizr.custom.js}"></script>
+<script th:src="@{/js/animating.js}"></script>
+<script th:src="@{/js/imagesloaded.pkgd.min.js}"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script th:src="@{/js/perfect-scrollbar.min.js}"></script>
+<script th:src="@{/js/jquery.shuffle.min.js}"></script>
+<script th:src="@{/js/masonry.pkgd.min.js}"></script>
+<script th:src="@{/js/owl.carousel.min.js}"></script>
+<script th:src="@{/js/jquery.magnific-popup.min.js}"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrDf32aQTCVENBhFJbMBKOUTiUAABtC2o"></script>
+<script th:src="@{/js/jquery.googlemap.js}"></script>
+<script th:src="@{/js/validator.js}"></script>
+<script th:src="@{/js/main.js}"></script>
+
+<script th:inline="javascript">
+  function recaptchaCallback() {
+    let response = grecaptcha.getResponse();
+    if (response.length === 0) {
+      alert("recaptcha를 먼저 진행해주세요.");
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  $(document).ready(function () {
+    // 스무스 스크롤 구현
+    $('a[href^="#"]').on('click', function (event) {
+      var target = $(this.getAttribute('href'));
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+          scrollTop: target.offset().top
+        }, 1000);
+      }
+    });
+
+    // 스크롤 위치에 따른 메뉴 활성화
+    $(window).on('scroll', function () {
+      var scrollPosition = $(window).scrollTop();
+
+      // 각 섹션을 순회하면서 현재 스크롤 위치에 해당하는 섹션 찾기
+      $('section').each(function () {
+        var topDistance = $(this).offset().top;
+
+        if ((topDistance - 100) < scrollPosition) {
+          // 해당 섹션에 대응하는 메뉴 항목 활성화
+          var id = $(this).attr('id');
+          $('ul.main-menu > li').removeClass('active');
+          $('ul.main-menu > li > a[href="#' + id + '"]').parent().addClass('active');
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
